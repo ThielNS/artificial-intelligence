@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Algorithm</title>
+</head>
+<body>
+  <script src="blind-search.js" type="text/javascript"></script>
+  <script>
+    const F = {};
+
+    const E = {F};
+    
+    const D = {E};
+    
+    const C = {D,F,E};
+    
+    const B = {C,F};
+    
+    const A = {B,C,D};
+    
+    function actions(s) {
+      switch (s) {
+        case 'A':
+          return Object.keys(A);
+        case 'B':
+          return Object.keys(B);
+        case 'C':
+          return Object.keys(C);
+        case 'D':
+          return Object.keys(D);
+        case 'E':
+          return Object.keys(E);
+        case 'F':
+          return Object.keys(F);
+        default:
+          break;
+      }
+    }
+
+    console.log('// Wide Search');
+    console.log(WideSearch(actions, { A }, { F }, 'deep'));
+  </script>
+</body>
+</html>
