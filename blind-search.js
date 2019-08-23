@@ -1,13 +1,12 @@
 /**
- * Wide Search
+ * Blind Search
  * 
  * @param {Function} Action Method of the actions
  * @param {String} InitialState Initial state
  * @param {Object} EndStateSet End state set
  * @returns {Array} Path traveled
  */
-function WideSearch(Action, InitialState, EndStateSet, searchType='wide') {
-  debugger
+function BlindSearch(Action, InitialState, EndStateSet, searchType='wide') {
   let SetOfPastStates = [];
   let FollowingStateSet = [Object.keys(InitialState).shift()];
 
