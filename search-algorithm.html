@@ -39,7 +39,10 @@
     }
 
     console.log('// Wide Search');
-    console.log(WideSearch(actions, { A }, { F }, 'deep'));
+    console.log(BlindSearch(actions, { A }, { F }));
+
+    console.log('// Deep Search');
+    console.log(BlindSearch(actions, { A }, { F }, 'deep'));
   </script>
 </body>
 </html>
